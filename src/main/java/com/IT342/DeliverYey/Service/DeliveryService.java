@@ -28,20 +28,6 @@ public class DeliveryService {
 
     public DeliveryEntity insertDelivery(DeliveryEntity delivery) {
         try {
-<<<<<<< HEAD
-            // First, check if the student exists
-            StudentEntity student = studentRepository.findById(delivery.getStudent().getSid())
-                    .orElseThrow(() -> new NoSuchElementException("Student with ID " + delivery.getStudent().getSid() + " not found."));
-
-            // Set the student for the delivery
-            delivery.setStudent(student);
-
-            // Save the delivery entity
-            return deliveryRepository.save(delivery);
-        } catch (Exception e) {
-            logger.error("Error occurred while inserting delivery: " + e.getMessage());
-            throw e;
-=======
             // Save the delivery
             deliveryRepository.save(delivery);
 
@@ -58,7 +44,6 @@ public class DeliveryService {
             e.printStackTrace();
             // Return null or handle the error appropriately
             return null;
->>>>>>> 7eaad78 (new update from Delivery)
         }
     }
 
@@ -73,32 +58,18 @@ public class DeliveryService {
         return deliveryList;
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7eaad78 (new update from Delivery)
     public DeliveryEntity updateDelivery(Long deliveryId, DeliveryEntity newDeliveryDetails) {
         DeliveryEntity delivery = deliveryRepository.findById(deliveryId)
                 .orElseThrow(() -> new NoSuchElementException("Delivery with ID " + deliveryId + " not found."));
 
-<<<<<<< HEAD
-        delivery.setDeliveryTime(newDeliveryDetails.getDeliveryTime());
-        delivery.setDeliveryAddress(newDeliveryDetails.getDeliveryAddress());
-        delivery.setStatus(newDeliveryDetails.getStatus());
-=======
         delivery.setPhoneNumber(newDeliveryDetails.getPhoneNumber());
         delivery.setLocation(newDeliveryDetails.getLocation());
         delivery.setPaymentMethod(newDeliveryDetails.getPaymentMethod());
         delivery.setNotes(newDeliveryDetails.getNotes());
->>>>>>> 7eaad78 (new update from Delivery)
 
         return deliveryRepository.save(delivery);
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7eaad78 (new update from Delivery)
     public String deleteDelivery(Long deliveryId) {
         if (deliveryRepository.existsById(deliveryId)) {
             deliveryRepository.deleteById(deliveryId);

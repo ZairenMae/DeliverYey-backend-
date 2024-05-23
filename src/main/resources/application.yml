@@ -1,14 +1,8 @@
 spring:
   datasource:
-<<<<<<< HEAD
-    url: jdbc:mysql://localhost:3306/dbdeliveryey
-    username: root
-    password: zairen
-=======
     url: jdbc:mysql://localhost:3306/dbdelivery
     username: root
     password: 1234
->>>>>>> 7eaad78 (new update from Delivery)
     hikari:
       connectionTimeout: 20000 # Example of setting Hikari connection pool properties
       maximumPoolSize: 5
@@ -19,8 +13,4 @@ spring:
     show-sql: true
 
 server:
-<<<<<<< HEAD
-  port: 8081
-=======
   port: 8080
->>>>>>> 7eaad78 (new update from Delivery)

@@ -30,10 +30,7 @@ public class OrderItemController {
     }
 
     @DeleteMapping("/deleteOrderItem/{requestId}")
-<<<<<<< HEAD
-=======
     @CrossOrigin(origins = "http://localhost:5173", methods = {RequestMethod.DELETE})
->>>>>>> 7eaad78 (new update from Delivery)
     public String deleteOrderItem(@PathVariable int requestId) {
         return orderItemService.deleteOrderItem(requestId);
     }

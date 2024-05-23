@@ -3,7 +3,10 @@ package com.IT342.DeliverYey.Entity;
 import com.IT342.DeliverYey.UserType;
 
 import javax.persistence.*;
+<<<<<<< HEAD
 import java.time.LocalDateTime;
+=======
+>>>>>>> 7eaad78 (new update from Delivery)
 
 @Entity
 @Table(name = "tbldelivery")
@@ -14,6 +17,7 @@ public class DeliveryEntity {
     @Column(name = "delivery_id")
     private Long deliveryId;
 
+<<<<<<< HEAD
     @Column(name = "DeliveryTime")
     private LocalDateTime deliveryTime;
 
@@ -22,6 +26,16 @@ public class DeliveryEntity {
 
     @Column(name = "Status")
     private String status;
+=======
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
+    @Column(name = "location")
+    private String location;
+
+    @Column(name = "payment_method")
+    private String paymentMethod;
+>>>>>>> 7eaad78 (new update from Delivery)
 
     @Column(name = "notes")
     private String notes;
@@ -38,10 +52,17 @@ public class DeliveryEntity {
         super();
     }
 
+<<<<<<< HEAD
     public DeliveryEntity(LocalDateTime deliveryTime, String deliveryAddress, String status, String notes) {
         this.deliveryTime = deliveryTime;
         this.deliveryAddress = deliveryAddress;
         this.status = status;
+=======
+    public DeliveryEntity(String phoneNumber, String location, String paymentMethod, String notes) {
+        this.phoneNumber = phoneNumber;
+        this.location = location;
+        this.paymentMethod = paymentMethod;
+>>>>>>> 7eaad78 (new update from Delivery)
         this.notes = notes;
     }
 
@@ -53,6 +74,7 @@ public class DeliveryEntity {
         this.deliveryId = deliveryId;
     }
 
+<<<<<<< HEAD
     public LocalDateTime getDeliveryTime() {
         return deliveryTime;
     }
@@ -75,6 +97,30 @@ public class DeliveryEntity {
 
     public void setStatus(String status) {
         this.status = status;
+=======
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+>>>>>>> 7eaad78 (new update from Delivery)
     }
 
     public String getNotes() {
